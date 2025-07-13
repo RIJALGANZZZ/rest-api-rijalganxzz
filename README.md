@@ -1,8 +1,8 @@
-# Falcon API UI
+# Rijalganzz Api
 
-A modern, clean, and user-friendly interface for browsing and testing Falcon API endpoints.
+A modern, clean, and user-friendly interface for browsing and testing Rijal API endpoints.
 
-![Falcon API UI Screenshot](image.png)
+![Rijal API UI Screenshot](image.png)
 
 ## Features
 
@@ -25,12 +25,12 @@ A modern, clean, and user-friendly interface for browsing and testing Falcon API
 
 1. Clone this repository to your web server:
    ```bash
-   git clone https://github.com/FlowFalcon/falcon-api-ui.git
+   git clone https://github.com/rijalganzz
    ```
 
 2. Configure your API endpoints in `settings.json` (see Configuration section below)
 
-3. Access the UI through your web server (e.g., `https://your-domain.com/falcon-api-ui/`)
+3. Access the UI through your web server (e.g., `https://rest-api-rijalganxzz.vercel.app`)
 
 ## Configuration
 
@@ -38,29 +38,95 @@ All API endpoints and categories are configured in the `settings.json` file. The
 
 ```json
 {
-  "name": "Falcon-Api",
-  "version": "v1.2",
-  "description": "Simple and easy to use API.",
+  "name": "Rest Api RijalGanzz",
+  "version": "v1.0.0",
+  "description": "Rijal Rest Api",
   "bannerImage": "/src/banner.jpg",
   "header": {
     "status": "Online!"
   },
   "apiSettings": {
-    "creator": "FlowFalcon", 
-    "apikey": ["falcon-api"]
+    "creator": "RijalGanzz",
+    "apikey": ["ELAINA MD"]
   },
   "categories": [
     {
-      "name": "Category Name",
-      "image": "/api/placeholder/800/200",
+      "name": "AI (Artificial Intelligence)",
       "items": [
         {
-          "name": "Endpoint Name",
-          "desc": "Endpoint description",
-          "path": "/api/endpoint?param=",
-          "status": "ready", // Can be "ready", "error", or "update"
+          "name": "LuminAI",
+          "desc": "Talk with luminai",
+          "path": "/ai/luminai?text=",
+          "status": "ready",
           "params": {
-            "param": "Description of the parameter"
+            "text": "Text for luminai to respond to"
+          }
+        },
+        {
+          "name": "HydroMind",
+          "desc": "See the list of supported AI models here: https://mind.hydrooo.web.id",
+          "path": "/ai/hydromind?text=&model=",
+          "status": "ready",
+          "params": {
+            "text": "Teks atau perintah untuk chat AI",
+            "model": "1See the list of supported AI models here: https://mind.hydrooo.web.id"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Random",
+      "items": [
+        {
+          "name": "Blue Archive",
+          "desc": "Blue Archive Random Images",
+          "path": "/random/ba",
+          "status": "ready"
+        },
+        {
+          "name": "SSWeb",
+          "desc": "Screenshot website from URL",
+          "path": "/random/ssweb?url=",
+          "status": "ready",
+          "params": {
+            "url": "Masukin Link Website Nya"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Search Tools",
+      "items": [
+        {
+          "name": "YouTube",
+          "desc": "Video search",
+          "path": "/search/youtube?q=",
+          "status": "ready",
+          "params": {
+            "q": "Search query"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Brat",
+      "items": [
+        {
+          "name": "Brat",
+          "desc": "Generate brat-style image",
+          "path": "/imagecreator/brat?text=",
+          "status": "ready",
+          "params": {
+            "text": "Masukan Text"
+          }
+        },
+        {
+          "name": "BratVid",
+          "desc": "Generate brat-style video",
+          "path": "/imagecreator/bratvideo?text=",
+          "status": "ready",
+          "params": {
+            "text": "Masukan Text"
           }
         }
       ]
@@ -142,4 +208,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ---
 
-Created with ❤️ by [FlowFalcon](https://github.com/FlowFalcon)
+Created with ❤️ by [RijalGanzz](https://github.com/rijalganzz)
