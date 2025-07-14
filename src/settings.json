@@ -45,13 +45,10 @@
           "status": "ready"
         },
         {
-          "name": "SSWeb",
-          "desc": "Screenshot website from URL",
-          "path": "/random/ssweb?url=",
+          "name": "Screenshot Web",
+          "desc": "Screenshot web url",
           "status": "ready",
-          "params": {
-            "url": "Masukin Link Website Nya"
-          }
+          "path": "/random/ssweb?apikey=&url="
         }
       ]
     },
@@ -74,23 +71,17 @@
       "items": [
         {
           "name": "Brat",
-          "desc": "Generate brat-style image",
-          "path": "/imagecreator/brat?text=",
+          "desc": "Brat text generator",
           "status": "ready",
-          "params": {
-            "text": "Masukan Text"
-          }
+          "path": "/imagecreator/brat?apikey=&text="
         },
         {
-          "name": "BratVid",
-          "desc": "Generate brat-style video",
-          "path": "/imagecreator/bratvideo?text=",
+          "name": "Brat Video",
+          "desc": "Brat animated text generator",
           "status": "ready",
-          "params": {
-            "text": "Masukan Text"
-          }
+          "path": "/imagecreator/bratvideo?apikey=&text="
         }
       ]
     }
   ]
-    }
+}
