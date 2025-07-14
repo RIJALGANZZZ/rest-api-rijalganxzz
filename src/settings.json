@@ -1,13 +1,13 @@
 {
-  "name": "Rest Api RijalGanzz",
+  "name": "RijalGanzz",
   "version": "v1.0.0",
-  "description": "Rijal Rest Api",
+  "description": "Simple and easy to use API.",
   "bannerImage": "/src/banner.jpg",
   "header": {
     "status": "Online!"
   },
   "apiSettings": {
-    "creator": "RijalGanzz",
+    "creator": "RijalGanxz",
     "apikey": ["ELAINA MD"]
   },
   "categories": [
@@ -47,8 +47,11 @@
         {
           "name": "Screenshot Web",
           "desc": "Screenshot web url",
+          "path": "/tools/ssweb?url=",
           "status": "ready",
-          "path": "/random/ssweb?apikey=&url="
+          "params": {
+            "url": "URL halaman yang ingin di-screenshot"
+          }
         }
       ]
     },
@@ -65,23 +68,6 @@
           }
         }
       ]
-    },
-    {
-      "name": "Brat",
-      "items": [
-        {
-          "name": "Brat",
-          "desc": "Brat text generator",
-          "status": "ready",
-          "path": "/imagecreator/brat?apikey=&text="
-        },
-        {
-          "name": "Brat Video",
-          "desc": "Brat animated text generator",
-          "status": "ready",
-          "path": "/imagecreator/bratvideo?apikey=&text="
-        }
-      ]
     }
   ]
-}
+        }
