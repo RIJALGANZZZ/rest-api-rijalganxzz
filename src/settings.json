@@ -52,6 +52,24 @@
           "params": {
             "url": "URL halaman yang ingin di-screenshot"
           }
+        },
+        {
+          "name": "Brat",
+          "desc": "Brat text generator",
+          "path": "/imagecreator/brat?text=",
+          "status": "ready",
+          "params": {
+            "text": "Teks yang akan diubah jadi style Brat"
+          }
+        },
+        {
+          "name": "Brat Video",
+          "desc": "Brat animated text generator",
+          "path": "/imagecreator/bratvideo?text=",
+          "status": "ready",
+          "params": {
+            "text": "Teks animasi Brat"
+          }
         }
       ]
     },
