@@ -55,11 +55,11 @@
         },
         {
           "name": "Brat",
-          "desc": "Brat text generator",
+          "desc": "type the text",
           "path": "/imagecreator/brat?text=",
           "status": "ready",
           "params": {
-            "text": "Teks yang akan diubah jadi style Brat"
+            "text": "Text for Brat to respond to"
           }
         },
         {
