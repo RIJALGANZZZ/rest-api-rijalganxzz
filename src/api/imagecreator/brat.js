@@ -1,29 +1,27 @@
-module.exports = function app(app) {
-    app.get('/imagecreator/brat', async (req, res) => {
-        try {
-            const { text } = req.query
-            const pedo = await getBuffer(`https://aqul-brat.hf.space/?text=${encodeURIComponent(text)}&mode=image`)
-            res.writeHead(200, {
-                'Content-Type': 'image/png',
-                'Content-Length': pedo.length
-            })
-            res.end(pedo)
-        } catch (error) {
-            res.status(500).send(`Error: ${error.message}`)
-        }
-    })
+const https = require('https');
 
-    app.get('/imagecreator/bratvideo', async (req, res) => {
-        try {
-            const { text } = req.query
-            const pedo = await getBuffer(`https://fastrestapis.fasturl.cloud/maker/brat/animated?text=${text}&mode=animated`)
-            res.writeHead(200, {
-                'Content-Type': 'video/mp4',
-                'Content-Length': pedo.length
-            })
-            res.end(pedo)
-        } catch (error) {
-            res.status(500).send(`Error: ${error.message}`)
-        }
-    })
-}
+module.exports = function (app) {
+  app.get('/imagecreator/brat', async (req, res) => {
+    let { text } = req.query;
+    if (!text) return res.json({ status: false, message: 'Input text is required!' });
+
+    let url = `https://api.deno.dev/brat?text=${encodeURIComponent(text)}`;
+    https.get(url, (r) => {
+      if (r.statusCode !== 200) return res.json({ status: false, message: 'Failed to fetch brat image.' });
+      res.setHeader('Content-Type', r.headers['content-type']);
+      r.pipe(res);
+    }).on('error', () => res.json({ status: false, message: 'Failed to reach brat API.' }));
+  });
+
+  app.get('/imagecreator/bratvideo', async (req, res) => {
+    let { text } = req.query;
+    if (!text) return res.json({ status: false, message: 'Input text is required!' });
+
+    let url = `https://api.deno.dev/bratvideo?text=${encodeURIComponent(text)}`;
+    https.get(url, (r) => {
+      if (r.statusCode !== 200) return res.json({ status: false, message: 'Failed to fetch brat video.' });
+      res.setHeader('Content-Type', r.headers['content-type']);
+      r.pipe(res);
+    }).on('error', () => res.json({ status: false, message: 'Failed to reach bratvideo API.' }));
+  });
+};
