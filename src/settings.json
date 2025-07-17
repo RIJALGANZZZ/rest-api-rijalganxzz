@@ -1,13 +1,13 @@
 {
-  "name": "RijalGanzz",
+  "name": "Rest Api RijalGanzz",
   "version": "v1.0.0",
-  "description": "Simple and easy to use API.",
+  "description": "Rijal Rest Api",
   "bannerImage": "/src/banner.jpg",
   "header": {
     "status": "Online!"
   },
   "apiSettings": {
-    "creator": "RijalGanxz",
+    "creator": "RijalGanzz",
     "apikey": ["ELAINA MD"]
   },
   "categories": [
@@ -47,29 +47,8 @@
         {
           "name": "Screenshot Web",
           "desc": "Screenshot web url",
-          "path": "/tools/ssweb?url=",
           "status": "ready",
-          "params": {
-            "url": "URL halaman yang ingin di-screenshot"
-          }
-        },
-        {
-          "name": "Brat",
-          "desc": "type the text",
-          "path": "/imagecreator/brat?text=",
-          "status": "ready",
-          "params": {
-            "text": "Text for Brat to respond to"
-          }
-        },
-        {
-          "name": "Brat Video",
-          "desc": "Brat animated text generator",
-          "path": "/imagecreator/bratvideo?text=",
-          "status": "ready",
-          "params": {
-            "text": "Teks animasi Brat"
-          }
+          "path": "/random/ssweb?apikey=&url="
         }
       ]
     },
@@ -86,6 +65,29 @@
           }
         }
       ]
+    },
+    {
+      "name": "Brat",
+      "items": [
+        {
+          "name": "Brat",
+          "desc": "Brat text generator",
+          "status": "ready",
+          "path": "/imagecreator/brat?text=",
+          "params": {
+            "text": "Teks yang akan dimasukkan ke dalam gambar brat"
+          }
+        },
+        {
+          "name": "Brat Video",
+          "desc": "Brat animated text generator",
+          "status": "ready",
+          "path": "/imagecreator/bratvideo?text=",
+          "params": {
+            "text": "Teks yang akan dimasukkan ke dalam video brat"
+          }
+        }
+      ]
     }
   ]
-        }
+}
