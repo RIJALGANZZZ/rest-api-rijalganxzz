@@ -48,7 +48,10 @@
           "name": "Screenshot Web",
           "desc": "Screenshot web url",
           "status": "ready",
-          "path": "/random/ssweb?apikey=&url="
+          "path": "/random/ssweb?url=",
+          "params": {
+            "url": "URL website yang ingin di-screenshot"
+          }
         }
       ]
     },
@@ -70,7 +73,7 @@
       "name": "Brat",
       "items": [
         {
-          "name": "Brat",
+          "name": "Brat By RijalGanzz",
           "desc": "Brat text generator",
           "status": "ready",
           "path": "/imagecreator/brat?text=",
